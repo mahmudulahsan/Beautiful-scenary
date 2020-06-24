@@ -1,0 +1,310 @@
+/*// BASE STYLES //*/
+
+
+
+html, body{
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.grass, .sky, .road{
+  position: relative;
+}
+
+.sky{
+  height: 40%;
+  background: skyblue;
+}
+
+.grass{
+  height: 30%;
+  background: #2e8b57;
+}
+
+.road{
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+
+.lines{
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+
+
+/*// ELEMENTS TO ANIMATE //*/
+
+.mario{
+  position: absolute;
+  top: -150px;
+  left: 0;
+  animation-name: drive-mario;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.vintage{
+  position: absolute;
+  top: -40px;
+  right: 0;
+  animation-name: drive-vintage;
+  animation-duration: 7s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.plane{
+  position: absolute;
+  top: 150px;
+  left: 0;
+  animation-name: drive-plane;
+  animation-duration: 15s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.pro{
+  position: absolute;
+  top: 139px;
+  right: 0;
+}
+.pro2{
+  position: absolute;
+  top: 139px;
+  right: 70px;
+}
+.pro3{
+  position: absolute;
+  top: 139px;
+  right: 140px;
+}
+.pro4{
+  position: absolute;
+  top: 139px;
+  right: 210px;
+}
+.pro5{
+  position: absolute;
+  top: 139px;
+  right: 280px;
+}
+.pro6{
+  position: absolute;
+  top: 139px;
+  right: 350px;
+}
+.pro7{
+  position: absolute;
+  top: 139px;
+  right: 420px;
+}
+.pro8{
+  position: absolute;
+  top: 139px;
+  right: 490px;
+}
+.pro9{
+  position: absolute;
+  top: 139px;
+  right: 560px;
+}
+.pro10{
+  position: absolute;
+  top: 139px;
+  right: 630px;
+}
+.pro11{
+  position: absolute;
+  top: 139px;
+  left: 0;
+}
+.pro12{
+  position: absolute;
+  top: 139px;
+  left: 70px;
+}
+.pro13{
+  position: absolute;
+  top: 139px;
+  left: 140px;
+}
+.pro14{
+  position: absolute;
+  top: 139px;
+  right: 700px;
+}
+.pro15{
+  position: absolute;
+  top: 139px;
+  right: 770px;
+}
+.pro16{
+  position: absolute;
+  top: 139px;
+  right: 840px;
+}
+.pro17{
+  position: absolute;
+  top: 139px;
+  right: 910px;
+}
+
+.gate{
+  position: absolute;
+  top: 115px;
+  left: 220px;
+}
+
+.player{
+  position: absolute;
+  top: 20px;
+  left: 100px;
+}
+.football{
+  position: absolute;
+  top: 35px;
+  left: 145px;
+  animation-name: drive-football;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+}
+
+.sun{
+  position: absolute;
+  top: 30px;
+  left: 150px;
+
+}
+
+.cloud{
+  position: absolute;
+  top: 15px;
+  right: 90px;
+  animation-name: drive-cloud;
+  animation-duration: 25s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.whitecloud{
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation-name: drive-whitecloud;
+  animation-duration: 30s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.tree{
+  position: absolute;
+  top: 203px;
+  left: 0;
+}
+.tree2{
+  position: absolute;
+  top: 203px;
+  left: 120px;
+}
+
+.mosque{
+  position: absolute;
+  top: -50px;
+  right: 0;
+}
+
+.date{
+  position: absolute;
+  top: -41px;
+  right: 100px;
+}
+
+.bird{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  /*animation-name: drive-bird;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;*/
+  animation: drive-bird 30s both infinite linear,
+            jump 2s ease infinite;
+}
+
+.down{
+  position: absolute;
+  bottom: 0;
+  right: 25px;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 20px;
+}
+
+
+
+/*// KEYFRAMES //*/
+
+@keyframes drive-mario{
+  from{transform: translateX(-200px)}
+  to{transform: translateX(2000px);}
+}
+
+@keyframes drive-vintage{
+  from{transform: translateX(200px)}
+  to{transform: translateX(-2000px)}
+}
+
+@keyframes drive-plane{
+  from{transform: translateX(-200px)}
+  to{transform: translateX(1500px)}
+}
+
+@keyframes drive-football{
+  from{transform: translateY(30px)}
+  to{transform: translateX(10px)}
+}
+
+@keyframes drive-cloud{
+  from{transform: translateX(200px)}
+  to{transform: translateX(-1500px)}
+}
+@keyframes drive-whitecloud{
+  from{transform: translateX(200px)}
+  to{transform: translateX(-1500px)}
+}
+
+@keyframes jump{
+  0%{top:50px}
+  50%{top:100px}
+  100%{top:50px}
+}
+
+@keyframes drive-bird{
+  from{transform: translateX(-150px)}
+  to{transform: translateX(1500px)}
+}
+
+
+
+
+
+
+
